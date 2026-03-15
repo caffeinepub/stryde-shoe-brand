@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/assets/fonts/PlayfairDisplay.woff2') format('woff2');
+  font-weight: 400 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/assets/fonts/Satoshi.woff2') format('woff2');
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0.08 0 0;
+    --foreground: 0.97 0 0;
+    --card: 0.12 0 0;
+    --card-foreground: 0.97 0 0;
+    --popover: 0.12 0 0;
+    --popover-foreground: 0.97 0 0;
+    --primary: 0.97 0 0;
+    --primary-foreground: 0.08 0 0;
+    --secondary: 0.18 0 0;
+    --secondary-foreground: 0.75 0 0;
+    --muted: 0.15 0 0;
+    --muted-foreground: 0.55 0 0;
+    --accent: 0.72 0.17 65;
+    --accent-foreground: 0.08 0 0;
+    --destructive: 0.55 0.22 27;
+    --destructive-foreground: 0.97 0 0;
+    --border: 0.22 0 0;
+    --input: 0.18 0 0;
+    --ring: 0.72 0.17 65;
+    --radius: 0.25rem;
+    --chart-1: 0.72 0.17 65;
+    --chart-2: 0.65 0.12 200;
+    --chart-3: 0.6 0.15 150;
+    --chart-4: 0.75 0.08 100;
+    --chart-5: 0.55 0.18 310;
+    --sidebar: 0.10 0 0;
+    --sidebar-foreground: 0.97 0 0;
+    --sidebar-primary: 0.97 0 0;
+    --sidebar-primary-foreground: 0.08 0 0;
+    --sidebar-accent: 0.72 0.17 65;
+    --sidebar-accent-foreground: 0.08 0 0;
+    --sidebar-border: 0.22 0 0;
+    --sidebar-ring: 0.72 0.17 65;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Satoshi', sans-serif;
+  }
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+  .font-body {
+    font-family: 'Satoshi', sans-serif;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
